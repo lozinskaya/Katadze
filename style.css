@@ -181,6 +181,7 @@ svg{
 #content h1{
     font-size: 8vw;
     letter-spacing: 10px;
+    line-height: 66px;
 }
 #content p {
     padding-top: 22px;
