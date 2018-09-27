@@ -1,0 +1,53 @@
+body, html { 
+}
+.container .row{
+	height:100vh;
+}
+img{
+	width:30px;
+}
+.katadzeLogo img{
+	width:100%;
+}
+.navigation{
+	margin:0px auto;
+}
+.navigation img{
+	margin:10px;
+}
+.container{
+margin:0px;
+width:100%!important;
+}
+@media (min-width: 1200px){
+.container {
+    max-width:100%; 
+}
+.left{
+	padding:0px;
+}
+.right{
+	background-color:black;
+	color:white;
+}
+.right .row .text{
+	font-size:80px;
+	margin-bottom: .5rem; 
+    font-weight: 500;
+    line-height: 1.2;
+	text-transform:uppercase;
+}
+.text{
+	text-align:center;
+	margin:0px auto;
+}
+.textNav{
+	text-align:center;
+}
+.textNav img{
+	margin: 5px;
+}
+.katadzeLogo{
+	background-color:black;
+	width:100%;
+}
