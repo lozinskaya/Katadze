@@ -216,12 +216,10 @@ svg{
 .contactButton{
 	font-size: 2vw;
 }
-}
-@media screen and (max-width: 1199px) {
-	.navigation{
+.navigation{
 		color: #FFF;
 	}
-	#BurgerMenu path {
+#BurgerMenu path {
     fill: white;
-	}
+}
 }
