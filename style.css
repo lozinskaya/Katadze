@@ -100,10 +100,6 @@ svg{
 	width: 35px;
 	margin-right: 14px;
 }
-#BurgerMenu path:after{
-	fill: white; 
-    mix-blend-mode: difference;
-}
 .contentWrapper{
 	padding: 53px 206px;
 }
@@ -223,5 +219,8 @@ svg{
 .navigation{
 		color: #FFF;
 	}
-
+.closes .textNav{
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%)
+}
 }
