@@ -4,19 +4,15 @@ window.onload = function () {
 	colorMenuIcon();
 	window.addEventListener('resize', colorMenuIcon);
 	window.onscroll = function() {
-		console.log(window.innerWidth);
 	if ((getBodyScrollTop() >= window.innerHeight) && (window.innerWidth < 1199)){
 		svg.style.fill = "black";
 		navigation.style.color = "black";
-		console.log("1");
 	} else if (window.innerWidth < 1199) {
 		svg.style.fill = "white";
 		navigation.style.color = "white";
-		console.log("2");
 	} else if (window.innerWidth >= 1199) {
 		svg.style.fill = "black";
 		navigation.style.color = "black";
-		console.log("3");
 	}
 }
 }
@@ -32,14 +28,11 @@ function colorMenuIcon()
   if ((getBodyScrollTop() > window.innerHeight) && (window.innerWidth < 1199)){
 		svg.style.fill = "black";
 		navigation.style.color = "black";
-		console.log("1");
 	} else if ((window.innerWidth < 1199) && ( getBodyScrollTop() < window.innerHeight)) {
 		svg.style.fill = "white";
 		navigation.style.color = "white";
-		console.log("2");
 	} else if (window.innerWidth >= 1199) {
 		svg.style.fill = "black";
 		navigation.style.color = "black";
-		console.log("3");
 	}
 }
