@@ -1,6 +1,8 @@
 window.onload = function () {
 	var svg =  document.querySelector("#BurgerMenu path");
 	var navigation =  document.querySelector(".navigation");
+	var navButtons = document.querySelector(".navButtons");
+	var main = document.querySelector("#main");
 	colorMenuIcon();
 	window.addEventListener('resize', colorMenuIcon);
 	window.onscroll = function() {
@@ -14,6 +16,18 @@ window.onload = function () {
 		svg.style.fill = "black";
 		navigation.style.color = "black";
 	}
+	if ((window.innerWidth < 1199) && (getBodyScrollTop() > main.clientHeight)) {
+		navButtons.style.position = "fixed";
+	}
+	if ((navButtons.getBoundingClientRect().top <= 0) && (getBodyScrollTop() > main.clientHeight)) {
+		navButtons.style.position = "fixed";
+	}
+	if (getBodyScrollTop() <= main.clientHeight) {
+		navButtons.style.position = "sticky";
+		console.log("yes");
+	}
+	console.log(getBodyScrollTop());
+	console.log(main.clientHeight);
 }
 }
 

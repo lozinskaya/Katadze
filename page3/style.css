@@ -16,6 +16,24 @@ section#main {
 	background-color: #FFF;
 	padding: 11vh 0;
 }
+.col-12 {
+    padding-left: 8px;
+}
+.image{
+	position: relative;
+	height: : 500px;
+	padding-top: 122px;
+}
+.image img{
+	width: 90%;
+	height: 500px;
+}
+.image h1{
+	position: absolute;
+	z-index: 100;
+	top: 50px;
+    left: 176px;
+}
 img{
 	width:30px;
 }
@@ -105,6 +123,11 @@ svg{
 }
 .navButtons{
 	height: 100vh;
+	right: 0px;
+	position: sticky;
+	top: 0px;
+	z-index: 101;
+	padding-right: 0px;
 }
 .closes{
 	background-color: black;
@@ -124,9 +147,14 @@ svg{
     font-size: 6vw;
     font-weight: bold;
     font-family: 'BebasNeueRegular', sans-serif;
-    letter-spacing: 10px;
+    letter-spacing: 7px;
     line-height: 141px;
     color: #343434;
+}
+.turnedText{
+	transform: rotate(180deg);
+    top: 560px!important;
+    right: 135px;
 }
 #content h2{
 	text-transform: uppercase;
@@ -147,8 +175,9 @@ svg{
 #content p{
 	text-align: left;
 	font-weight: lighter;
-	padding-top: 24px;
     padding-bottom: 70px;
+    line-height: 1.7;
+    font-size: 1.2vw;
 }
 .textNav{
 	position: absolute;
@@ -174,6 +203,65 @@ svg{
 	font-size: 1vw;
 	border-radius: 2px;
 }
+.ProjectSketch{
+	margin: 28px 0px;
+}
+.ProjectSketch1{
+	width: 100%;
+	background-color: #FFBBBB;
+	height: 276px;
+	position: relative;
+}
+.ProjectSketch1 p, .ProjectSketch2 p, .ProjectSketch3 p, .ProjectSketch4 p,.ProjectSketch5 p,.ProjectSketch6 p{
+	transform: rotate(-90deg);
+	position: absolute;
+	top: 0px;
+	left: -8%;
+}
+.ProjectSketch1 h3, .ProjectSketch2 h3, .ProjectSketch3 h3, .ProjectSketch4 h3, .ProjectSketch5 h3, .ProjectSketch6 h3{
+	position: absolute;
+	top: -7%;
+	left: 15px;
+	font-weight: bold;
+	color: #3F3F3F;
+}
+.p p{
+	padding-bottom: 0px;	
+}
+h5{
+	transform: rotate(0deg);
+	position: absolute;
+	bottom: 0px;
+	right: 6%;
+}
+h6{
+	padding: 6px 0;
+}
+.ProjectSketch2{
+	width: 100%;
+	background-color: #FF9B62;
+	height: 276px;
+}
+.ProjectSketch5{
+	width: 100%;
+	background-color: #FF95E1;
+	height: 276px;
+}
+.ProjectSketch6{
+	width: 100%;
+	background-color: #DADADA;
+	height: 276px;
+}
+.ProjectSketch4{
+	width: 100%;
+	background-color: #6CEDFF;
+	height: 276px;
+}
+.ProjectSketch3{
+	width: 100%;
+	background-color: #98FF8F;
+	height: 176px;
+}
 @media screen and (max-width: 1199px) {
 .contentWrapper{
 	padding: 24px 34px;
@@ -185,7 +273,7 @@ svg{
 }
 #content p {
     padding-top: 22px;
-    padding-bottom: 13px;
+    font-size: 4vw;
 }
 .closes{
 	background-color: black;
@@ -206,9 +294,6 @@ svg{
 #content h4 {
     font-size: 3.5vw;
 }
-#content p{
-	font-size: 4vw;
-}
 #content h2{
 	font-size: 5vw;
 	line-height: 48px;
@@ -217,10 +302,21 @@ svg{
 	font-size: 2vw;
 }
 .navigation{
-		color: #FFF;
+	color: #FFF;
 	}
 .closes .textNav{
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%)
+}
+.turnedText {
+    top: 591px!important;
+}
+.image h1 {
+    top: 88px;
+}
+}
+@media screen and (max-width: 768px) {
+.col-12.col-md-5.ProjectSketch1,.col-12.col-md-5.ProjectSketch5 {
+    margin-bottom: 61px;
 }
 }
