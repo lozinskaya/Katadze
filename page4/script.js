@@ -23,11 +23,9 @@ window.onload = function () {
 		}
 		if ((window.innerWidth < 1199) && (getBodyScrollTop() > main.clientHeight)) {
 			navButtons.style.position = "fixed";
-		}
-		if ((navButtons.getBoundingClientRect().top <= 0) && (getBodyScrollTop() > main.clientHeight)) {
+		} else if ((navButtons.getBoundingClientRect().top <= 0) && (getBodyScrollTop() > main.clientHeight)) {
 			navButtons.style.position = "fixed";
-		}
-		if (getBodyScrollTop() <= main.clientHeight) {
+		}else {
 			navButtons.style.position = "sticky";
 		}
 	}
