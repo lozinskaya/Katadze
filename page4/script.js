@@ -1,8 +1,8 @@
 window.onload = function () {
-	var svg =  document.querySelector("#BurgerMenu path");
-	var navigation =  document.querySelector(".navigation");
-	var navButtons = document.querySelector(".navButtons");
-	var main = document.querySelector("#main");
+	let svg =  document.querySelector("#BurgerMenu path");
+	let navigation =  document.querySelector(".navigation");
+	let navButtons = document.querySelector(".navButtons");
+	let main = document.querySelector("#main");
 	WidthForm();
 	colorMenuIcon();
 	if ((window.innerWidth < 1199) && (getBodyScrollTop() > main.clientHeight)) {
@@ -55,7 +55,7 @@ function colorMenuIcon()
 function WidthForm()
 {
 	let form =  document.querySelector(".row .form");
-	var navigation =  document.querySelector(".closes");
+	let navigation =  document.querySelector(".closes");
 	if ((window.innerWidth <= 767)) { form.style.width = "100%";}
 	if ((window.innerWidth > 767)) {
 		let x = window.innerWidth - navigation.clientWidth - 15;
