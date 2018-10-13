@@ -12,6 +12,10 @@ section#main {
     height: 100vh;
     background-color: black;
 }
+section#content {
+    margin-left: 0px;
+    margin-right: 0px;
+}
 .left{
 	background-color: #FFF;
 	padding: 11vh 0;
@@ -154,6 +158,7 @@ svg{
 	font-weight: lighter;
 	padding-top: 24px;
     padding-bottom: 70px;
+    font-size: 2vw;
 }
 .textNav{
 	position: absolute;
@@ -178,6 +183,33 @@ svg{
 	padding: 8px;
 	font-size: 1vw;
 	border-radius: 2px;
+}
+.form{
+	position: relative;
+	background-color: #E3F9FE;
+	margin: 0px;
+	min-height: 180px;
+}
+.form h3{
+	position: absolute;
+	top: -11%;
+	left: 14%;
+	font-weight: bold;
+	color: #3F3F3F;
+}
+#content .form h4, #content .form h5 {
+    color: #000000;
+    margin-left: 14%;
+    margin-top: 2.5%;
+}
+#content .form h4{
+	font-weight: normal;
+}
+#content .form h5{
+	text-decoration: underline;
+	text-transform: none;
+	font-weight: bold;
+	font-size: 1.7vw;
 }
 @media screen and (max-width: 1199px) {
 .contentWrapper{
@@ -208,10 +240,7 @@ svg{
 .navButtons{
 	height: 200px;
 }
-#content h4 {
-    font-size: 3.5vw;
-}
-#content p{
+#content p, #content .form h4, #content .form h5{
 	font-size: 4vw;
 }
 #content h2{

@@ -3,32 +3,34 @@ window.onload = function () {
 	var navigation =  document.querySelector(".navigation");
 	var navButtons = document.querySelector(".navButtons");
 	var main = document.querySelector("#main");
+	WidthForm();
 	colorMenuIcon();
-	window.addEventListener('resize', colorMenuIcon);
-	window.onscroll = function() {
-	if ((getBodyScrollTop() >= window.innerHeight) && (window.innerWidth < 1199)){
-		svg.style.fill = "black";
-		navigation.style.color = "black";
-	} else if (window.innerWidth < 1199) {
-		svg.style.fill = "white";
-		navigation.style.color = "white";
-	} else if (window.innerWidth >= 1199) {
-		svg.style.fill = "black";
-		navigation.style.color = "black";
-	}
 	if ((window.innerWidth < 1199) && (getBodyScrollTop() > main.clientHeight)) {
 		navButtons.style.position = "fixed";
 	}
-	if ((navButtons.getBoundingClientRect().top <= 0) && (getBodyScrollTop() > main.clientHeight)) {
-		navButtons.style.position = "fixed";
+	window.addEventListener('resize', colorMenuIcon);
+	window.addEventListener('resize', WidthForm);
+	window.onscroll = function() {
+		if ((getBodyScrollTop() >= window.innerHeight) && (window.innerWidth < 1199)){
+			svg.style.fill = "black";
+			navigation.style.color = "black";
+		} else if (window.innerWidth < 1199) {
+			svg.style.fill = "white";
+			navigation.style.color = "white";
+		} else if (window.innerWidth >= 1199) {
+			svg.style.fill = "black";
+			navigation.style.color = "black";
+		}
+		if ((window.innerWidth < 1199) && (getBodyScrollTop() > main.clientHeight)) {
+			navButtons.style.position = "fixed";
+		}
+		if ((navButtons.getBoundingClientRect().top <= 0) && (getBodyScrollTop() > main.clientHeight)) {
+			navButtons.style.position = "fixed";
+		}
+		if (getBodyScrollTop() <= main.clientHeight) {
+			navButtons.style.position = "sticky";
+		}
 	}
-	if (getBodyScrollTop() <= main.clientHeight) {
-		navButtons.style.position = "sticky";
-		console.log("yes");
-	}
-	console.log(getBodyScrollTop());
-	console.log(main.clientHeight);
-}
 }
 
 function getBodyScrollTop()
@@ -48,5 +50,16 @@ function colorMenuIcon()
 	} else if (window.innerWidth >= 1199) {
 		svg.style.fill = "black";
 		navigation.style.color = "black";
+	}
+}
+function WidthForm()
+{
+	let form =  document.querySelector(".row .form");
+	var navigation =  document.querySelector(".closes");
+	if ((window.innerWidth <= 767)) { form.style.width = "100%";}
+	if ((window.innerWidth > 767)) {
+		let x = window.innerWidth - navigation.clientWidth - 15;
+		form.style.width = x + "px";
+		console.log(navigation.getBoundingClientRect().width );
 	}
 }
